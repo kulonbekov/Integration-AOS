@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_6.1.xsd">
+
+    <module name="base" package="com.axelor.apps.base.db"/>
+
+    <entity name="Product">
+        <integer name="productNumber" title="Product number"/>                           <!--номер товара-->
+        <many-to-one name="tnvedPositionCode" title="Tnved position code"
+                     ref="com.axelor.apps.ens.db.TnvedPositionCode"/>                    <!--транспортное средство-->
+        <string name="description" title="Product description"/>                         <!--описание товара-->
+        <decimal name="grossWeight" title="Gross weight"/>                               <!--вес товара-->
+        <many-to-one name="declaration" title="Declaration"
+                     ref="com.axelor.apps.ens.db.Declaration"/>                          <!--связь с 'Declaration'-->
+    </entity>
+</domain-models>

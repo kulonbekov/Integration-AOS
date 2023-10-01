@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_6.1.xsd">
+
+    <module name="electronic-navigation-seals" package="com.axelor.apps.ens.db"/>
+
+    <entity name="TransportType">
+        <integer name="code" title="Code"/>                  <!--код-->
+        <string name="name" title="Name"/>                   <!--наименование-->
+    </entity>
+
+</domain-models>

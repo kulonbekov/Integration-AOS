@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_6.1.xsd">
+
+    <module name="electronic-navigation-seals" package="com.axelor.apps.ens.db"/>
+
+    <entity name="TransportationVehicle">
+        <many-to-one name="transportType" title="Type of vehicle"
+                     ref="com.axelor.apps.ens.db.TransportType"/>                          <!--тип АТС-->
+        <many-to-one name="countryRegVehicle" title="Country registration vehicle"
+                     ref="com.axelor.apps.base.db.Country"/>                               <!--страна регистрации АТС-->
+        <string name="plateNo" title="PlateNO"/>                                           <!--гос.номер АТС-->
+        <finder-method name="findByPlateNumberAndRegisterCountry" using="plateNo,countryRegVehicle"/>
+    </entity>
+
+</domain-models>

@@ -72,3 +72,7 @@ libs.faker = 'net.datafaker:datafaker:1.6.0'
 libs.logback = 'ch.qos.logback:logback-classic:1.4.5'
 
 libs.swagger_jaxrs = 'io.swagger.core.v3:swagger-jaxrs2:2.2.8'
+
+libs.javax_xml_ws = 'javax.xml.ws:jaxws-api:2.3.1'
+libs.javax_jws_jsr181 = 'javax.jws:jsr181-api:1.0-MR1'
+libs.jaxws_rt = 'com.sun.xml.ws:jaxws-rt:2.3.5'

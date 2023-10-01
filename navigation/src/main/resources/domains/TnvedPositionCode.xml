@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_6.1.xsd">
+
+    <module name="electronic-navigation-seals" package="com.axelor.apps.ens.db"/>
+
+    <entity name="TnvedPositionCode">
+        <string name="name" max="1000" title="Name"/>
+        <string name="code" title="Code"/>
+        <boolean name="noCodePosition" title="No code position"/>
+        <many-to-one name="parent" ref="com.axelor.apps.ens.db.TnvedPositionCode"
+                     title="TNVED code parent"/>
+    </entity>
+
+</domain-models>
