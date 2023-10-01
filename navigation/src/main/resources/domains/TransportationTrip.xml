@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_6.1.xsd">
+
+    <module name="electronic-navigation-seals" package="com.axelor.apps.ens.db"/>
+
+    <sequence name="transportation.trip.seq" initial="1" increment="1" padding="6" prefix="TT"/>
+
+    <entity name="TransportationTrip">
+        <string name="transportationNumber" title="Transportation number"
+                sequence="transportation.trip.seq"/>                                                               <!--номер перевозки-->
+        <string name="transportationStatus" title="Transportation status"
+                selection="ens.transportation.status.select"/>                                                     <!--статус поездки-->
+        <one-to-one name="declaration" ref="com.axelor.apps.ens.db.Declaration"
+                    title="Declaration"/>                                                                          <!--таможенная декларация-->
+
+        <track>
+            <field name="transportationStatus"/>
+        </track>
+    </entity>
+
+</domain-models>

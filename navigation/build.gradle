@@ -1,0 +1,22 @@
+plugins {
+    id 'com.axelor.app'
+}
+
+apply from: "../libs.gradle"
+apply from: "../version.gradle"
+
+apply {
+    version = openSuiteVersion
+}
+
+axelor {
+    title "Electronic navigation seals"
+}
+
+dependencies {
+    api project(":modules:axelor-base")
+
+    implementation libs.javax_xml_ws
+    implementation libs.javax_jws_jsr181
+    implementation libs.jaxws_rt
+}

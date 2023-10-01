@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<domain-models xmlns="http://axelor.com/xml/ns/domain-models"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://axelor.com/xml/ns/domain-models http://axelor.com/xml/ns/domain-models/domain-models_6.1.xsd">
+
+    <module name="electronic-navigation-seals" package="com.axelor.apps.ens.db"/>
+
+    <entity name="Declaration">
+        <string name="registrationNumberTd" title="Registration Number TD"/>               <!--регистрационный номер ТД-->
+        <many-to-one name="departureCountry" title="Departure country"
+                     ref="com.axelor.apps.base.db.Country"/>                               <!--страна отправления-->
+        <many-to-one name="destinationCountry" title="Destination country"
+                     ref="com.axelor.apps.base.db.Country"/>                               <!--страна назначения-->
+        <string name="counterpartyName" title="Counterparty name"/>                        <!--наименование контрагента-->
+        <many-to-one name="countryRegistration" title="Country registration"
+                     ref="com.axelor.apps.base.db.Country"/>                               <!--страна регистрации-->
+        <many-to-one name="transportationVehicle" title="Transportation vehicle"
+                     ref="com.axelor.apps.ens.db.TransportationVehicle"/>                  <!--транспортное средство-->
+        <many-to-one name="customsDeparture" title="Customs departure"
+                     ref="com.axelor.apps.ens.db.CustomsOffice"/>                          <!--таможенный орган отправления-->
+        <many-to-one name="customsDestination" title="Customs destination"
+                     ref="com.axelor.apps.ens.db.CustomsOffice"/>                          <!--таможенный орган назначения-->
+        <one-to-many name="product" title="Product"
+                     ref="com.axelor.apps.base.db.Product" mappedBy="declaration"/>         <!--связь с 'Product'-->
+    </entity>
+
+</domain-models>
