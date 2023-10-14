@@ -1,9 +1,8 @@
 
-package org.tempuri;
+package com.axelor.apps.navigation.integration.eais;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -18,7 +17,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="RequestTDResult" type="{http://tempuri.org/}TransitDeclarationResponse" minOccurs="0"/>
+ *         &lt;element name="request" type="{http://tempuri.org/}TDInfoRequest" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,36 +28,35 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "requestTDResult"
+    "request"
 })
-@XmlRootElement(name = "RequestTDResponse")
-public class RequestTDResponse {
+@XmlRootElement(name = "RequestTD")
+public class RequestTD {
 
-    @XmlElement(name = "RequestTDResult")
-    protected TransitDeclarationResponse requestTDResult;
+    protected TDInfoRequest request;
 
     /**
-     * Gets the value of the requestTDResult property.
+     * Gets the value of the request property.
      * 
      * @return
      *     possible object is
-     *     {@link TransitDeclarationResponse }
+     *     {@link TDInfoRequest }
      *     
      */
-    public TransitDeclarationResponse getRequestTDResult() {
-        return requestTDResult;
+    public TDInfoRequest getRequest() {
+        return request;
     }
 
     /**
-     * Sets the value of the requestTDResult property.
+     * Sets the value of the request property.
      * 
      * @param value
      *     allowed object is
-     *     {@link TransitDeclarationResponse }
+     *     {@link TDInfoRequest }
      *     
      */
-    public void setRequestTDResult(TransitDeclarationResponse value) {
-        this.requestTDResult = value;
+    public void setRequest(TDInfoRequest value) {
+        this.request = value;
     }
 
 }
