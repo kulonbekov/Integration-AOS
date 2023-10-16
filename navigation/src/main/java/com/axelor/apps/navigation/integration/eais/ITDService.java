@@ -1,5 +1,5 @@
 
-package com.axelor.apps.navigation.integration.eais;
+package com.axelor.apps.navigation.integration.org.tempuri;
 
 import javax.jws.WebMethod;
 import javax.jws.WebParam;

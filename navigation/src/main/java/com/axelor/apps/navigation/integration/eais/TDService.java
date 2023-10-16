@@ -1,5 +1,5 @@
 
-package com.axelor.apps.navigation.integration.eais;
+package com.axelor.apps.navigation.integration.org.tempuri;
 
 import java.net.MalformedURLException;
 import java.net.URL;
