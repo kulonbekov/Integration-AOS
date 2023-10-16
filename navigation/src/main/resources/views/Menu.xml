@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_6.1.xsd">
+
+    <menuitem name="ens.menu-item" title="ENS" icon-background="cyan"
+              icon="fa-handshake-o" tag="new" tag-style="important"/>
+
+    <menuitem name="ens.transportation-trip.menu-item" title="Transportation trip"
+              action="ens.transportation-trip.action-view" parent="ens.menu-item"/>                                     <!--Поездка-->
+    <action-view name="ens.transportation-trip.action-view" title="Transportation trip"
+                 model="com.axelor.apps.ens.db.TransportationTrip" home="true">
+        <view type="grid" name="ens.transportation.trip-grid"/>
+        <view type="form" name="ens.transportation.trip-form"/>
+    </action-view>
+
+</object-views>

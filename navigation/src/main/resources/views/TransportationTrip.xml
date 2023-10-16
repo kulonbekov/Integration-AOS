@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_6.1.xsd">
+
+    <grid name="ens.transportation.trip-grid" title="Transportation trip" model="com.axelor.apps.ens.db.TransportationTrip">
+        <field name="transportationNumber"/>
+        <field name="declaration.registrationNumberTd"/>
+    </grid>
+
+    <form name="ens.transportation.trip-form" title="Trip" model="com.axelor.apps.ens.db.TransportationTrip">
+        <panel name="mainPanel" title="Trip">
+        <field name="transportationNumber" readonly="true"/>
+        <field name="transportationStatus" readonly="true" widget="singleSelect"/>
+        </panel>
+
+        <panel name="basicInformation" title="Basic information" itemSpan="4">
+            <panel showIf="declaration == null" colSpan="12">
+                <field name="$registrationNumberTd" title="Registration Number TD"/>
+                <button name="searchDeclaration" title="Search"
+                        onClick="com.axelor.apps.navigation.web.DeclarationController:setDeclarationFromOtherSystem"/>
+                <field name="declaration" hidden="true"/>
+            </panel>
+            <panel showIf="declaration != null" colSpan="12" itemSpan="4">
+                <field name="declaration.registrationNumberTd"/>
+                <field name="declaration.departureCountry"/>
+                <field name="declaration.destinationCountry"/>
+            </panel>
+        </panel>
+        <panel name="senderInformation" title="Sender information">
+            <field name="declaration.counterpartyName" required="true"/>
+            <field name="declaration.countryRegistration"/>
+        </panel>
+        <panel name="vehicle" title="Vehicle">
+            <field name="declaration.transportationVehicle.transportType" colSpan="4"/>
+            <field name="declaration.transportationVehicle.countryRegVehicle" colSpan="4"/>
+            <field name="declaration.transportationVehicle.plateNo" colSpan="4"/>
+            <field name="declaration.transportationVehicle" hidden="true" width="0"/>
+        </panel>
+        <panel name="productInformation" title="Product information">
+            <field name="declaration.product" showTitle="false" colSpan="12" form-view="ens.product-form" grid-view="ens.product-grid"/>
+        </panel>
+        <panel name="checkpoints" title="Checkpoints">
+            <field name="declaration.customsDeparture"/>
+            <field name="declaration.customsDestination"/>
+        </panel>
+
+
+    </form>
+</object-views>
