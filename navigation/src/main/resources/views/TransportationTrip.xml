@@ -11,7 +11,7 @@
     <form name="ens.transportation.trip-form" title="Trip" model="com.axelor.apps.ens.db.TransportationTrip">
         <panel name="mainPanel" title="Trip">
         <field name="transportationNumber" readonly="true"/>
-        <field name="transportationStatus" readonly="true" widget="singleSelect"/>
+        <field name="transportationStatus" widget="singleSelect"/>
         </panel>
 
         <panel name="basicInformation" title="Basic information" itemSpan="4">
