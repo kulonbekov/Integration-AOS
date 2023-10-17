@@ -1,5 +1,5 @@
 
-package com.axelor.apps.navigation.integration.org.tempuri;
+package com.axelor.apps.navigation.integration.eais;
 
 import java.math.BigDecimal;
 import javax.xml.bind.annotation.XmlAccessType;
