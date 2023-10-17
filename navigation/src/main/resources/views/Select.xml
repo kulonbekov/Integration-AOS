@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<object-views xmlns="http://axelor.com/xml/ns/object-views"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://axelor.com/xml/ns/object-views http://axelor.com/xml/ns/object-views/object-views_6.1.xsd">
+    <!-- Статус поездки -->
+    <selection name="ens.transportation.status.select">
+        <option value="1" color="cyan">Pending</option>                         <!-- В ожидании -->
+        <option value="2" color="grey">In Queue</option>                        <!-- В очереди -->
+        <option value="3" color="red">Denied</option>                           <!-- Отказан -->
+        <option value="4" color="darkgray">Processed</option>                   <!-- Обработан -->
+        <option value="5" color="green">Mobile group assigned</option>          <!-- Назначена мобильная группа -->
+        <option value="6" color="blue">Delivered</option>                       <!-- Доставлено -->
+        <option value="7" color="lightgreen">In Transit</option>                <!-- В пути -->
+        <option value="8" color="yellow">Report has been compiled</option>      <!-- Составлен акт -->
+    </selection>
+
+</object-views>

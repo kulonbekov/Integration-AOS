@@ -8,7 +8,7 @@
     <entity name="Product">
         <integer name="productNumber" title="Product number"/>                           <!--номер товара-->
         <many-to-one name="tnvedPositionCode" title="Tnved position code"
-                     ref="com.axelor.apps.ens.db.TnvedPositionCode"/>                    <!--транспортное средство-->
+                     ref="com.axelor.apps.ens.db.TnvedPositionCode"/>                    <!--код ТН ВЕД-->
         <string name="description" title="Product description"/>                         <!--описание товара-->
         <decimal name="grossWeight" title="Gross weight"/>                               <!--вес товара-->
         <many-to-one name="declaration" title="Declaration"
