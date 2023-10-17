@@ -1,10 +1,9 @@
 package com.axelor.apps.navigation.service.impl;
 
 import com.axelor.apps.ens.db.Declaration;
-import com.axelor.apps.navigation.integration.org.tempuri.*;
-import com.axelor.apps.navigation.integration.org.tempuri.mapper.DeclarationMapper;
+import com.axelor.apps.navigation.integration.eais.*;
+import com.axelor.apps.navigation.integration.eais.mapper.DeclarationMapper;
 import com.axelor.apps.navigation.service.EAISService;
-import com.axelor.inject.Beans;
 import com.google.inject.Inject;
 
 
